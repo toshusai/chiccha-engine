@@ -1,0 +1,33 @@
+{
+  "name": "@toshusai/chiccha-engine",
+  "version": "1.0.0-alpha.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.3",
+    "lua-in-js": "^2.2.4",
+    "matter-js": "^0.20.0",
+    "vite": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/matter-js": "^0.19.6",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "jsdom": "^24.1.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.2.2",
+    "vitest": "^1.6.0"
+  }
+}
