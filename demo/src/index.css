@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Gamer";
+  src: url("/x8y12pxTheStrongGamer.ttf");
+}
+
+:root {
+  font-family: Gamer;
+}
+
+button {
+  font-family: Gamer;
+  background: transparent;
+  border: 1px solid black;
+  box-shadow: 0 2px 0 1px black;
+  padding: 4px 8px;
+}
+
+button:focus-visible {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+button:hover {
+  background: black;
+  color: white;
+}
+
+button:active {
+  box-shadow: 0 1px 0 1px black;
+  transform: translateY(1px);
+}
+
+canvas {
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}

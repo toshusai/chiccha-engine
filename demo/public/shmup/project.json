@@ -1,0 +1,155 @@
+{
+  "id": "shmup",
+  "name": "Shmup",
+  "assets": [
+    {
+      "id": "PLAYER_IMAGE",
+      "type": "ImageAsset",
+      "src": "/shmup/player.png"
+    },
+    {
+      "id": "ENEMY_IMAGE",
+      "type": "ImageAsset",
+      "src": "/shmup/enemy.png"
+    },
+    {
+      "id": "BG_IMAGE",
+      "type": "ImageAsset",
+      "src": "/shmup/bg.png"
+    },
+    {
+      "id": "PLAYER_SCRIPT",
+      "type": "ScriptAsset",
+      "src": "/shmup/player.lua"
+    },
+    {
+      "id": "ENEMY_SCRIPT",
+      "type": "ScriptAsset",
+      "src": "/shmup/enemy.lua"
+    },
+    {
+      "id": "BULLET_SCRIPT",
+      "type": "ScriptAsset",
+      "src": "/shmup/bullet.lua"
+    },
+    {
+      "id": "BULLET_IMAGE",
+      "type": "ImageAsset",
+      "src": "/shmup/bullet.png"
+    },
+    {
+      "id": "DAMAGE_IMAGE_1",
+      "type": "ImageAsset",
+      "src": "/shmup/damage_1.png"
+    },
+    {
+      "id": "DAMAGE_IMAGE_2",
+      "type": "ImageAsset",
+      "src": "/shmup/damage_2.png"
+    },
+    {
+      "id": "DAMAGE_IMAGE_3",
+      "type": "ImageAsset",
+      "src": "/shmup/damage_3.png"
+    }
+  ],
+  "gameObjects": [
+    {
+      "id": "background",
+      "name": "background",
+      "type": "GameObject",
+      "components": [
+        {
+          "id": "background_image_renderer",
+          "type": "ImageRenderer",
+          "imageAssetId": "BG_IMAGE"
+        },
+        {
+          "id": "background_transform",
+          "type": "Transform",
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "player",
+      "name": "player",
+      "type": "GameObject",
+      "components": [
+        {
+          "id": "player_script",
+          "type": "Script",
+          "scriptAssetId": "PLAYER_SCRIPT"
+        },
+        {
+          "id": "player_image_renderer",
+          "type": "ImageRenderer",
+          "imageAssetId": "PLAYER_IMAGE"
+        },
+        {
+          "id": "player_transform",
+          "type": "Transform",
+          "position": {
+            "x": 0,
+            "y": 48
+          }
+        }
+      ]
+    },
+    {
+      "id": "enemy",
+      "name": "enemy",
+      "type": "GameObject",
+      "components": [
+        {
+          "id": "enemy_script",
+          "type": "Script",
+          "scriptAssetId": "ENEMY_SCRIPT"
+        },
+        {
+          "id": "enemy_image_renderer",
+          "type": "ImageRenderer",
+          "imageAssetId": "ENEMY_IMAGE",
+          "enableCollision": true
+        },
+        {
+          "id": "enemy_transform",
+          "type": "Transform",
+          "position": {
+            "x": -24,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "bullet",
+      "name": "bullet",
+      "type": "GameObject",
+      "components": [
+        {
+          "id": "bullet_script",
+          "type": "Script",
+          "scriptAssetId": "BULLET_SCRIPT"
+        },
+        {
+          "id": "bullet_image_renderer",
+          "type": "ImageRenderer",
+          "imageAssetId": "BULLET_IMAGE",
+          "enableCollision": true
+        },
+        {
+          "id": "bullet_transform",
+          "type": "Transform",
+          "position": {
+            "x": 0,
+            "y": 112
+          }
+        }
+      ]
+    }
+  ]
+}
